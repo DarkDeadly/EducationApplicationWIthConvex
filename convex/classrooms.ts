@@ -51,7 +51,8 @@ export const getTeacherClassrooms = query({
             return classrooms.map((classroom) => ({
                 ...classroom,
                 teacherName: user.fullname,
-                teacherEmail: user.email
+                teacherEmail: user.email,
+                
             }))
     }
 

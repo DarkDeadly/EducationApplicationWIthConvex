@@ -11,7 +11,7 @@ import EmptyState from '../../../../src/shared-features/components/EmptyState';
 const index = () => {
   const getClassroomDetail = useQuery(api.classrooms.getClassroom)
   const insets = useSafeAreaInsets();
-  
+  console.log(getClassroomDetail)
   if (getClassroomDetail === undefined) {
      return (
       <View style={styles.loading}>

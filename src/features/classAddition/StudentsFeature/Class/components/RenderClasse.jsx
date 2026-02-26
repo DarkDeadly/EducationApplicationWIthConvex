@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useMutation, useQuery } from 'convex/react';
 import { useRouter } from 'expo-router';
-import { useState, useTransition } from 'react';
+import { useTransition } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { api } from '../../../../../../convex/_generated/api';
@@ -18,7 +18,6 @@ const RenderClasse = ({ item }) => {
     const [isPending, startTransition] = useTransition()
     const JoinFunction = useMutation(api.classrooms.joinClass)
     const user = useQuery(api.users.getUserByClerkId)
-    const [error, setError] = useState(null);
     const router = useRouter();
 
 

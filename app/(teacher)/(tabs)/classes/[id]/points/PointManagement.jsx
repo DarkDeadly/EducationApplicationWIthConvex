@@ -53,7 +53,7 @@ const PointManagementScreen = () => {
           reason : form.getValues("reason"),
            
         })
-        console.log("success")
+        router.back()
       } catch (error) {
         console.log(error.message)
       }
@@ -76,6 +76,7 @@ const handleRemovePoints = (data) => {
            
         })
         console.log("success")
+        router.back()
       } catch (error) {
         console.log(error.message)
       }

@@ -2,12 +2,12 @@ import { Ionicons } from '@expo/vector-icons';
 import { useQuery } from 'convex/react';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import {
-    ActivityIndicator,
-    FlatList,
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
+  ActivityIndicator,
+  FlatList,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 import Animated, { FadeInDown, FadeInUp } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -23,7 +23,7 @@ const formatDateTime = (dateString) => {
 };
 
 const HistoryItem = ({ item, index }) => {
-  const { day, time } = formatDateTime(item.createdAt);
+  const { day, time } = formatDateTime(item?._creationTime);
 
   return (
     <Animated.View
@@ -83,7 +83,7 @@ const PupilHistory = () => {
         
         <View style={styles.headerTextGroup}>
           <Text style={styles.headerTitle}>سجل المشتريات</Text>
-          <Text style={styles.headerSubtitle}>إجمالي العمليات: {pupilHistory?.count || 0}</Text>
+          <Text style={styles.headerSubtitle}>إجمالي العمليات: {pupilHistory?.length }</Text>
         </View>
       </View>
 

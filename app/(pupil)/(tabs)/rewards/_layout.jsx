@@ -4,7 +4,7 @@ const RewardsLayout = () => {
   return (
     <Stack screenOptions={{headerShown : false}}>
         <Stack.Screen name='index' />
-        {/*<Stack.Screen name='[classid]' /> */}
+        <Stack.Screen name='[classid]' /> 
     </Stack>
   );
 }
