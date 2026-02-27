@@ -10,6 +10,7 @@
 
 import type * as classrooms from "../classrooms.js";
 import type * as courses from "../courses.js";
+import type * as material from "../material.js";
 import type * as points from "../points.js";
 import type * as purchases from "../purchases.js";
 import type * as rewards from "../rewards.js";
@@ -24,6 +25,7 @@ import type {
 declare const fullApi: ApiFromModules<{
   classrooms: typeof classrooms;
   courses: typeof courses;
+  material: typeof material;
   points: typeof points;
   purchases: typeof purchases;
   rewards: typeof rewards;

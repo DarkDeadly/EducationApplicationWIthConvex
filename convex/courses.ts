@@ -42,3 +42,12 @@ export const getClassCourses = query({
         return courses
     }
 })
+
+export const getCoursebyId = query({
+    args : {courseId : v.id("courses")} , 
+    handler : async(ctx , args) => {
+         const identity  = await ctx.auth.getUserIdentity()
+        if (!identity) return []
+        return await ctx.db.get("courses",args.courseId)
+    }
+})

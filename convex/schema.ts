@@ -55,6 +55,13 @@ export default defineSchema({
         pointsSpent:v.number()
     })
     .index("by_Pupil" , ["pupilId"])
-    .index("by_reward" , ["rewardId"])
+    .index("by_reward" , ["rewardId"]),
+   materials: defineTable({
+    courseId: v.id("courses"),
+    title: v.string(),
+    storageId: v.id("_storage"), // Store the ID, not just the URL
+    duration: v.number(),
+    fileSize: v.number()
+}).index("by_course", ["courseId"])
 })
 
