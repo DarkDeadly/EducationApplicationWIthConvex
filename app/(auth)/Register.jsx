@@ -72,6 +72,7 @@ export default function Register() {
             }
          } catch (error) {
             const code = error.errors?.[0]?.code;
+            console.log(error)
 
           if (code === "form_identifier_exists") {
               setAuthError("هذا البريد الإلكتروني مسجل بالفعل. حاول تسجيل الدخول.");
